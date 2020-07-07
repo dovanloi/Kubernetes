@@ -13,8 +13,8 @@ Xem thông tin chi tiết của node:
 kubectl describe node/[name-node]
 ```
 
-Lấy tocken:
+Lấy secret:
 ```sh
-kubeadm tocken create --print-join-command
+kubectl get secret -n [name]
 ```
 
