@@ -64,3 +64,10 @@ hoặc xóa pod được tạo bằng file
 ```sh
 kubectl delete -f [tên file]
 ```
+
+## Proxi
+```sh
+kubectl proxi
+```
+
+
