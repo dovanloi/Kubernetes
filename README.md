@@ -69,5 +69,52 @@ kubectl delete -f [tên file]
 ```sh
 kubectl proxi
 ```
+## Deployment
+Lấy thông tin các deploy:
+```sh
+kubectl get deploy 
+```
+Lấy thông tin sự kiện deploy:
+```sh
+kubectl rollout history deploy/[name deploy]
+```
 
+Lấy thông tin sự kiện deploy theo phiên bản:
+```sh
+kubectl rollout history deploy/[name deploy] --revision=[phiên bản]
+```
 
+Backup về phiển bản trước:
+```sh
+kubectl rollout undo deploy/[name deploy] --to-revision=[phiên bản]
+```
+
+Xóa deploy
+```sh
+kubectl delete deploy/[name deploy]
+```
+
+## Service
+Lấy danh sách service:
+```sh
+kubectl get service
+```
+Xem chi tiết service:
+```sh
+kubectl get service/[tên service]
+```
+Xem chi tiết cấu hình service:
+```sh
+kubectl describe service/[tên service]
+```
+Trong đó Endpoints là IP của pod
+
+## Secret
+Danh sách secret:
+```sh
+kubectl get secret
+```
+Xem thông tin secret:
+```sh
+kubectl describe secret/[tên secret]
+```
