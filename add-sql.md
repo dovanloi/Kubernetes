@@ -1,18 +1,18 @@
 # Connect sql
 Mô tả: Để kết nối cơ sở dữ liệu từ Cloud SQL tới kube ta cần tạo ra 1 dịch vụ song song trên po, rồi chạy proxy để kết nối với database trên cloud. Trong pod ta chỉ cần kết nối tới 127.0.0.1 để kết nối cơ sở dữ liệu.
 
-B1: Tạo cơ sở dữ liệu
+Bước 1: Tạo cơ sở dữ liệu
 Các thông tin cần lưu lại:
 - Connection name
 - DB, User, Password
-B2: Tạo proxy 
+Bước 2: Tạo proxy 
 ```sh
 wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 ```
 ```sh
 chmod +x cloud_sql_proxy
 ```
-B3: Tạo tài khoản và cấp quyền truy vấn csdl
+Bước 3: Tạo tài khoản và cấp quyền truy vấn csdl
 ```sh
 gcloud iam service-accounts create proxy-user --display-name "proxy-user"
 ```
